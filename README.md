@@ -1,5 +1,5 @@
 ﻿# Zadání 14.03.
-## #1 - ddRekurze
+## #1 - Rekurze
 Vyberte si pár z těchto zadání a zkuste naprogramovat (*mnohdy dají se vyřešit i bez rekurze*):
 
 Factorial
