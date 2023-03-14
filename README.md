@@ -28,7 +28,7 @@ Zrnka rýže na šachovnici
 ---
 [Dostupné na codewars](https://www.codewars.com/kata/5b0d67c1cb35dfa10b0022c7)
 
-Existuje legenda o rýži. Mladý chlapec říká svému otrokáři, že má hlad a řekne mu, aby vzal šachovnici, dal na první políčok 1 zrnko rýže, na druhé 2, na třetí 4 a vždy násobil dvěmi pro další políčko. Hostitel nebyl chytrý a tak mu to slíbil, jenom aby zjistil, že ho kluk zbankrotoval.
+Existuje legenda o rýži. Mladý chlapec říká svému otrokáři, že má hlad a řekne mu, aby vzal šachovnici, dal na první políčko 1 zrnko rýže, na druhé 2, na třetí 4 a vždy násobil dvěmi pro další políčko. Hostitel nebyl chytrý a tak mu to slíbil, jenom aby zjistil, že ho kluk zbankrotoval.
 
 ### Úkol
 Vyrobte funkci, která dostane parametr `grains` a vrátí minimální počet políček, který potřeba proto, aby jsme se dostali k `grains` zrnkům rýže
