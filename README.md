@@ -44,6 +44,67 @@ SquaresNeeded(4) => 3
 ### Rada:
 >V rekurzi se dá využít více parametrů
 
+Databáze (Složité)
+---
+V souborech repositáře se lze dostat na kód *databáze*, kde je již přirpavený print. Třída vypadá takto:
+
+<details>
+<summary>Database class</summary>
+
+```cs
+public class Database
+{
+    //Key = key, Value = parentKey
+    private Dictionary<string, string> entries;
+
+    public void SeedDatabase()
+    {
+        entries = new()
+        {
+            { "Milan" ,  "root"   },
+            { "Eva"    ,  "Milan"  },
+            { "Martina",  "Milan"  },
+            { "Martin" ,  "Martina"},
+            { "Standa" ,  "Martina"},
+
+            { "Lacko"  ,  "root"   },
+            { "Alan"   ,  "Lacko"  },
+            { "Karina"   ,  "Lacko"  }
+        };
+    }
+
+    private void PrintBranch(string root, int depth)
+    {
+        //Vypíše root s depth mezerníky zleva
+        Console.WriteLine($"{new string(' ', depth)}{root}");
+
+        //Všichni, kdo mají 'parentKey' = root
+        var children = entries.Where(x => x.Value == root);
+        foreach (var child in children)
+        {
+            PrintBranch(child.Key, depth + 5);
+        }
+    }
+
+    public void PrintDatabase()
+    {
+        //Všichni, kdo mají 'parentKey' = "root"
+        var roots = entries.Where(x => x.Value == "root");
+        foreach (var root in roots)
+        {
+            PrintBranch(root.Key, 0);
+        }
+    }
+}
+```
+</details>
+
+### Úkol
+Zkuste přidat funkci `DeletBranch(branchKey)`, která smaže celý rod, to znamená, že pokud někoho mažeme, tak smažeme i jeho potomky, a jeho potomky ...
+
+### Rada
+> Funkce bude dosti podobná již připravenému `Print()`
+
 ## #2 - Sorting
 Zkuste si naprogramovat pár z některých základních řadících algoritmů:
 - Bubble sort
